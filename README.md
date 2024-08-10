@@ -1,6 +1,5 @@
 # data structure I
 # beecrowd tasks
--- https://github.com/shaylaalves/semester2-computer-science-coding/tree/main/beecrowd_tasks
 ---
 
 ## Welcome to My Programming Journey! 🌟
