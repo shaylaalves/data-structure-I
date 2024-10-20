@@ -1,0 +1,33 @@
+Possíveis erros de compilação de Pascal estarão nas variáveis
+
+
+O erro "Duplicate identifier 'NomeVendedor'" ocorre porque o identificador NomeVendedor está sendo utilizado tanto como o nome do programa quanto como o nome de uma variável. Para resolver isso, vamos renomear o identificador do programa para evitar o conflito. Aqui está a versão corrigida do código:
+
+pascal
+
+program SalarioComBonus;
+
+var
+  NomeVendedor: String;
+  SalarioFixo: Real;
+  TotalVendasPorMes: Real;
+  TotalReceber: Real;
+
+begin
+  ReadLn(NomeVendedor);
+  ReadLn(SalarioFixo);
+  ReadLn(TotalVendasPorMes);
+  
+  TotalReceber := SalarioFixo + (TotalVendasPorMes * 0.15);
+  
+  WriteLn('TOTAL = R$ ', TotalReceber:0:2);
+end.
+
+Certifique-se de seguir estes passos para compilar e executar o programa:
+
+    Salve o código em um arquivo chamado SalarioComBonus.pas.
+    Abra um terminal ou prompt de comando.
+    Navegue até o diretório onde está salvo o arquivo SalarioComBonus.pas.
+    Compile o código com o comando fpc SalarioComBonus.pas.
+
+Se seguir esses passos, o programa deve compilar e executar corretamente sem erros de compilação.
