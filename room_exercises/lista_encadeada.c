@@ -7,7 +7,6 @@ typedef struct Node
   struct Node *proximo;
 } Node;
 
-// Função para criar um novo nó
 Node *criaNo(int valor)
 {
   Node *novo_no = (Node *)malloc(sizeof(Node));
@@ -21,7 +20,6 @@ Node *criaNo(int valor)
   return novo_no;
 }
 
-// Função para inserir um nó no início da lista
 void insereInicio(Node **cabeca, int valor)
 {
   Node *novo_no = criaNo(valor);
@@ -29,7 +27,6 @@ void insereInicio(Node **cabeca, int valor)
   *cabeca = novo_no;
 }
 
-// Função para inserir um nó no final da lista
 void insereFinal(Node **cabeca, int valor)
 {
   Node *novo_no = criaNo(valor);
@@ -46,7 +43,6 @@ void insereFinal(Node **cabeca, int valor)
   temp->proximo = novo_no;
 }
 
-// Função para inserir um nó no meio da lista após um nó específico
 void insereMeio(Node *anterior, int valor)
 {
   if (anterior == NULL)
@@ -59,7 +55,6 @@ void insereMeio(Node *anterior, int valor)
   anterior->proximo = novo_no;
 }
 
-// Função para imprimir a lista
 void imprimeLista(Node *no)
 {
   while (no != NULL)
@@ -74,19 +69,15 @@ int main()
 {
   Node *cabeca = NULL;
 
-  // Inserção no início
   insereInicio(&cabeca, 10);
   insereInicio(&cabeca, 20);
   insereInicio(&cabeca, 30);
 
-  // Inserção no final
   insereFinal(&cabeca, 40);
   insereFinal(&cabeca, 50);
 
-  // Inserção no meio (após o primeiro nó)
   insereMeio(cabeca, 25);
 
-  // Imprime a lista final
   printf("Lista encadeada: ");
   imprimeLista(cabeca);
 
