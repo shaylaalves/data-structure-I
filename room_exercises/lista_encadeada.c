@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Definindo a estrutura de um nó da lista encadeada
 typedef struct Node
 {
   int info;
